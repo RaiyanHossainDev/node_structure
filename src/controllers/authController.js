@@ -190,3 +190,5 @@ const login = async (req, res) => {
 
     res.status(200).send({msg:"login successful", loginInfo:loginInfo , token:token});
 }
+
+module.exports = { register, linkVerification, resendLink, login }
