@@ -11,11 +11,12 @@ const port = 8000
 
 // ======================= middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: '*',
+}))
 app.use(route)
 db()
 
-console.log("run ho na plsssadads")
 // ======================= running server
 app.listen(port, (err)=>{
     if(err) return console.log(err)
